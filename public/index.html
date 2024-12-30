@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../dist//output.css">
+    <title>Happy Birthday/ Incessku</title>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body class="bg-[url('/img/pink.jpg')] bg-cover w-w-full h-full py-5">
+    <div class="relative flex flex-col justify-center items-center text-center">
+        <div id="H" class="flex mx-5 py-2">
+            <h1 class="text-6xl rounded-md mx-1 shadow-lg opacity-0 transition-opacity duration-500 shadow-teal-400 text-white font-semibold bg-teal-400 inline-block pb-2 w-16">H</h1>
+            <h1 class="text-6xl rounded-md mx-1 shadow-lg opacity-0 transition-opacity duration-500 shadow-indigo-400 text-white font-semibold bg-indigo-400 inline-block pb-2 w-16">A</h1>
+            <h1 class="text-6xl rounded-md mx-1 shadow-lg opacity-0 transition-opacity duration-500 shadow-fuchsia-400 text-white font-semibold bg-fuchsia-400 inline-block pb-2 w-16">P</h1>
+            <h1 class="text-6xl rounded-md mx-1 shadow-lg opacity-0 transition-opacity duration-500 shadow-rose-400 text-white font-semibold bg-rose-400 inline-block pb-2 w-16">P</h1>
+            <h1 class="text-6xl rounded-md mx-1 shadow-lg opacity-0 transition-opacity duration-500 shadow-cyan-400 text-white font-semibold bg-cyan-400 inline-block pb-2 w-16">Y</h1>
+        </div>
+        <div id="B" class="flex mx-5">
+            <h1 class="text-6xl rounded-md mx-1 shadow-lg opacity-0 transition-opacity duration-500 shadow-blue-400 text-white font-semibold bg-blue-400 inline-block pb-2 w-16">B</h1>
+            <h1 class="text-6xl rounded-md mx-1 shadow-lg opacity-0 transition-opacity duration-500 shadow-green-400 text-white font-semibold bg-green-400 inline-block pb-2 w-16">I</h1>
+            <h1 class="text-6xl rounded-md mx-1 shadow-lg opacity-0 transition-opacity duration-500 shadow-yellow-400 text-white font-semibold bg-yellow-400 inline-block pb-2 w-16">R</h1>
+            <h1 class="text-6xl rounded-md mx-1 shadow-lg opacity-0 transition-opacity duration-500 shadow-red-400 text-white font-semibold bg-red-400 inline-block pb-2 w-16">T</h1>
+            <h1 class="text-6xl rounded-md mx-1 shadow-lg opacity-0 transition-opacity duration-500 shadow-pink-400 text-white font-semibold bg-pink-400 inline-block pb-2 w-16">H</h1>
+            <h1 class="text-6xl rounded-md mx-1 shadow-lg opacity-0 transition-opacity duration-500 shadow-orange-400 text-white font-semibold bg-orange-400 inline-block pb-2 w-16">D</h1>
+            <h1 class="text-6xl rounded-md mx-1 shadow-lg opacity-0 transition-opacity duration-500 shadow-purple-400 text-white font-semibold bg-purple-400 inline-block pb-2 w-16">A</h1>
+            <h1 class="text-6xl rounded-md mx-1 shadow-lg opacity-0 transition-opacity duration-500 shadow-gray-400 text-white font-semibold bg-gray-400 inline-block pb-2 w-16">Y</h1>
+        </div>
+    </div>
+
+    <div id="Incessku" class="relative flex justify-center items-center text-center w-full top-0 py-28">
+        <div class="flex my-2">
+            <h1 class="text-2xl font-semibold text-white py-1 bg-cyan-400 bg-opacity-70 shadow-lg shadow-cyan-400 rounded-md opacity-0 transition-opacity duration-500">🌷Incessku Sayangg🌷</h1>
+        </div>
+    </div>
+
+    <div class="relative flex justify-center items-center text-center bottom-28 py-10">
+        <button id="clik" type="button" class="bg-cyan-400 shadow-lg shadow-cyan-400 px-4 py-2 rounded-xl text-white text-xl font-semibold transition ease-in-out delay-80 hover:translate-y-1 hover:scale-95 duration-300">Click Me
+            <img src="/img/click-svgrepo-com.svg" alt="Click Me" class="w-7 h-7 inline-block">
+        </button>
+    </div>
+
+    <div id="Scroll" class="relative flex flex-col justify-center items-center text-center bottom-12">
+        <div class="my-2">
+            <h1 class="text-white bg-gray-400 px-1 py-1 font-semibold rounded-lg opacity-0 transition-opacity duration-500"> 
+                Eh..Ehhh...Scroll Dong Cantikku🤭💗
+            </h1>
+        </div>
+
+        <div class="my-2">
+            <img src="/img/scroll-down-svgrepo-com .svg" alt="Scroll" class="w-9 h-9 bg-gray-400 px-2 py-2 rounded-full animate-bounce opacity-0 transition-opacity duration-500">
+        </div>
+    </div>
+
+    <div id="sayanggku" class="relative flex justify-start items-center text-center bottom-0 py-5">
+        <div class=" relativew-full h-full ">
+            <div class="w-full h-full">
+                <img src="/img/incess.png" alt="incessku" class="w-full h-full object-cover opacity-0 transition-opacity duration-500">
+            </div>
+        </div>
+    </div>
+
+    <div>
+
+    </div>
+
+    <script>
+        function revealText(containerId) {
+            const container = document.getElementById(containerId);
+            const letters = container.querySelectorAll("h1");
+            letters.forEach((letter, index) => {
+                setTimeout(() => {
+                    letter.classList.remove("opacity-0");
+                }, index * 500);
+            });
+
+            const img = container.querySelectorAll("img");
+            img.forEach((img, index) => {
+                setTimeout(() => {
+                    img.classList.remove("opacity-0");
+                }, index * 500);
+            });
+        }
+
+        function launchConfetti() {
+            confetti({
+                particleCount: 100,
+                spread: 70,
+                origin: { x: 0.5, y: 0.5 },
+                colors: ['#ff0000', '#00ff00', '#0000ff', '#ff00ff', '#ffff00', '#00ffff'],
+            });
+        }
+
+        document.getElementById('clik').onclick = () => {
+            launchConfetti();
+            revealText("H");
+            setTimeout(() => revealText("B"), 3000);
+            setTimeout(() => revealText("Incessku"), 7000);
+            setTimeout(() => revealText("Scroll"), 9000);
+            setTimeout(() => revealText("sayanggku"), 11000);
+        }
+    </script>
+</body>
+</html>
